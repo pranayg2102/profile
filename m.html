@@ -1,0 +1,48 @@
+
+
+<html>
+<head>
+<style>
+/* The image container */
+.img-container {
+  position: relative;
+  width: 50%;
+}
+
+/* The image */
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The popup text */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: solid black 1px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Show the popup text when hovering over the image container */
+.img-container:hover .popup {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Pop up animation example</h2>
+
+<div class="img-container">
+  <img src="^4^" alt="Computer monitor with a frog figurine" style="width:100%">
+  <div class="popup">This is a pop up text</div>
+</div>
+
+</body>
+</html>

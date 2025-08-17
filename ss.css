@@ -1,0 +1,79 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  width: 100vw; /* Ensure it spans the full width of the viewport */
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 0; /* Adjust padding for better spacing */
+}
+
+.line {
+  height: 2.5px;
+  width: 10%; /* Make width relative to the viewport */
+  background-color: #fec86a;
+   /* Set a max width to ensure it doesn't get too long on wider screens */
+}
+
+.darker-div {
+  background-color: #34353a;
+  width: 100vw;
+  height: 10vh; /* Use vh for a responsive height */
+}
+
+.experience h1 {
+  font-size: calc(2rem + 1vw); /* Make font size responsive */
+  font-family: "Libre Baskerville", serif;
+  color: #fbfbfb;
+  margin: 2vh 0; /* Adjust margin for spacing */
+}
+
+.lighter-div {
+  background-color: #3d3e42;
+  width: 100vw;
+  padding: 5vh; /* Use vh for padding to ensure it's responsive */
+  display: flex;
+  flex-direction: column;
+  gap: 5vh; /* Use vh to ensure gap is responsive */
+}
+
+.lighter-div .exp {
+  width: 80%; /* Make width relative to the viewport width */
+  max-width: 600px; /* Set a max-width to prevent it from getting too wide */
+  margin: 0 auto; /* Center align the block */
+}
+
+.exp h2, .exp-desc h3, .exp-desc h5, .exp-desc p {
+  color: #fbfbfb; /* Ensure text is visible against the background */
+}
+
+.exp h2::before, .exp-desc::before {
+  content: "";
+  display: block;
+  margin: 0 auto; /* Center align the pseudo elements */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .experience, .darker-div, .lighter-div {
+    padding: 3vh; /* Reduce padding for smaller screens */
+  }
+
+  .lighter-div .exp {
+    width: 90%; /* Increase width for smaller screens */
+  }
+
+  .exp h2, .exp-desc h3, .exp-desc h5, .exp-desc p {
+  font-size: calc(1.5rem + 1vw); /* Adjust font size to be more responsive */
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 768px) {
+  .experience h1 {
+    font-size: calc(1.5rem + 2vw); /* Increase responsiveness of font size */
+  }
+
+  .exp-desc::before {
+    height: 15vh; /* Adjust the pseudo element's height based on viewport height */
+  }
+}
